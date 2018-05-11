@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Donate</title>
+		
+		<meta charset="UTF-8">
+		<meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut urna aliquet, lacinia tortor a, bibendum lectus. Donec quis cursus massa. Nam euismod orci eu sem iaculis, sit amet bibendum tortor sollicitudin. Pellentesque nunc tortor, semper vel ipsum nec, semper congue dolor. Sed aliquam congue placerat. Donec id sollicitudin ex. Sed facilisis, tortor sit amet congue semper, tortor ipsum hendrerit nunc, sit amet condimentum augue leo nec neque. Pellentesque ac placerat nunc. Integer facilisis scelerisque ex sit amet mollis. Cras interdum nulla ut varius vehicula. Pellentesque at volutpat metus, et tempor sem. Sed urna tortor, consectetur consequat augue eget, finibus accumsan magna. In hac habitasse platea dictumst. Vestibulum at porta est." />
+		<meta name="keywords" content="Donate,Finances,Money,Payment,Penguin Warden,Volunteer Penguin Warden,Little Penguins,Manly Penguins" />
+		<meta name="author" content="Kevin S. Tran" />
+	</head>
+	
+	<body>
+		<div style="width:100%;padding:10px;text-align:center;">
+			
+			<article class='column1'>
+			
+				<h1>Donate</h1>
+				
+				<!-- REPLACE CONTENT -->
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut urna aliquet, lacinia tortor a, bibendum lectus. Donec quis cursus massa. Nam euismod orci eu sem iaculis, sit amet bibendum tortor sollicitudin. Pellentesque nunc tortor, semper vel ipsum nec, semper congue dolor. Sed aliquam congue placerat. Donec id sollicitudin ex. Sed facilisis, tortor sit amet congue semper, tortor ipsum hendrerit nunc, sit amet condimentum augue leo nec neque. Pellentesque ac placerat nunc. Integer facilisis scelerisque ex sit amet mollis. Cras interdum nulla ut varius vehicula. Pellentesque at volutpat metus, et tempor sem. Sed urna tortor, consectetur consequat augue eget, finibus accumsan magna. In hac habitasse platea dictumst. Vestibulum at porta est.
+				</p>
+				
+				<!-- THIS NEEDS WORK TOO-->
+				<form action="index.php?pages=donate.html&sect=getInvolved" id="donateForm">
+					<div id="donateMessage"></div>
+					<label for='donationAmount'>$</label>
+					<input type='number' id='donationAmount' name='donationAmount' placeholder='Donation Amount ...' style='width:50%;'/> </br>
+					<input type='submit' value='Click here to throw money at us'>
+				</form>
+				<!--
+					Mock donate post handler
+				-->
+				<script>
+					$('#donateForm').submit
+					(
+						function(event)
+						{
+							// don't load new page or anything
+							event.preventDefault();
+							
+							// acquire data
+							var currentForm = $(this);
+							var newAmount = parseInt(currentForm.find( "input[name='donationAmount']" ).val());
+							var url = currentForm.attr("action");
+							
+							// post data
+							var posting = $.post( url, { "total" : newAmount } );
+							
+							/*
+							 * METHOD TO HANDLE DONATIONS HERE
+							 *
+							 */
+							
+							// update div to user end
+							posting.done
+							(
+								function(data)
+								{
+									if (newAmount > 0)
+									{
+										$("#donateMessage").empty().append("<p style='text-align:center'><i>Thank you for donating. We appreciate any kind of support.</i></p>");
+										
+										$("#donateForm").find(" input[type=number] ").val("");
+									}
+									else
+									{
+										$("#donateMessage").empty().append("<p style='text-align:center'><i>If you're poor, a child or student who doesn't have access to a credit card, forgot to enter an amount or accidentally entered a negative amount (please enter a positive number), or you don't want to donate but decide to donate $0 or less anyway, that's alright, we understand. <br /> (We don't owe anyone if you enter a negative amount by the way)</i></p>");
+									}
+								}
+							);
+						}
+					);
+				</script>
+		</div>
+	</body>
+</html>

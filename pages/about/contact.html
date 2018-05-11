@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Contact Us</title>
+		
+		<meta charset="UTF-8">
+		<meta name="description" content="Manly Council (02) 9976 1500" />
+		<meta name="keywords" content="Contact Us,Penguin Warden,Volunteer Penguin Warden,Little Penguins Habitat,Little Penguins,Manly Penguins" />
+		<meta name="author" content="Kevin S. Tran" />
+	</head>
+	
+	<body>
+		<div class="bulletinBoard">
+		
+			<div class="bulletinPosterLeft">
+			
+				<h1>Contact Us</h1>
+			
+				<p>
+				
+				<strong>Manly Council</strong> (02) 9976 1500 <br />
+				
+				</p>
+				<p style="text-align:left;">
+				
+				<strong>Manly Environment Centre office</strong> and <a href='mailto:mec@manly.nsw.gov.au '>mec@manly.nsw.gov.au</a>
+				
+				</p>
+				<p>
+				
+				<strong>The National Parks and Wildlife Duty Officer</strong> (02) 9457 9577 to report any dogs, cats or foxes in critical habitat areas or anyone disturbing little penguins and their nests. <br />
+
+				<p>
+				
+			</div>
+			
+			<div class="bulletinPosterRight" style="height:240px;vertical-align:center;">
+			
+				<img 
+					src='https://upload.wikimedia.org/wikipedia/commons/8/81/Eudyptula_minor_family_exiting_burrow.jpg' 
+					alt='SAMPLE IMAGE'
+					width=300 
+				/>
+				
+			</div>
+			
+			<div class="bulletinPosterLeft">
+			
+				<h1>Contact Form</h1>
+				
+				<div id="contactMessage"></div>
+			
+				<form action="index.php?pages=contact.html&sect=about" id="contactForm">
+					<input type='text' name='contactName' placeholder='Name (full or otherwise) ...' /> </br>
+					<input type='email' name='contactEmail' placeholder='E-mail ...' /> </br>
+					<input type='text' name='contactTopic' placeholder='Topic name ...' /> </br>
+					<textarea rows='5' cols='45' name='contactContent' placeholder='Your message ...'></textarea>
+					<input type='submit' value='Send Message'>
+				</form>
+				
+			</div>
+			
+				<!--
+					Mock donate post handler
+				-->
+				<script>
+					$('#contactForm').submit
+					(
+						function(event)
+						{
+							// don't load new page or anything
+							event.preventDefault();
+							
+							// acquire data
+							var currentForm = $(this);
+							
+							var contactName = currentForm.find( "input[name='contactName']" ).val();
+							var contactEmail = currentForm.find( "input[name='contactEmail']" ).val();
+							var contactTopic = currentForm.find( "input[name='contactTopic']" ).val();
+							var contactContent = currentForm.find( "input[name='contactContent']" ).val();
+							
+							var url = currentForm.attr("action");
+							
+							// post data
+							var posting = $.post
+							(
+								url, 
+								{ 
+									"name" : contactName,
+									"email" : contactEmail,
+									"topic" : contactTopic,
+									"content" : contactContent, 
+								} 
+							);
+							
+							/*
+							 * METHOD TO HANDLE CONTACT MESSAGES HERE
+							 *
+							 */
+							
+							// update div to user end
+							posting.done
+							(
+								function()
+								{
+									if (contactEmail !== '')
+									{
+										$("#contactMessage").empty().append("<p style='text-align:center'><i>Your message has been sent. Thank you for your time. We'll get back to you shortly.</i></p>");
+										$("#contactForm").find(" input[type=text], input[type=email], textarea ").val("");
+									}
+									else
+									{
+										$("#contactMessage").empty().append("<p style='text-align:center'><i>Please enter your E-mail</i></p>");
+									}
+								}
+							);
+						}
+					);
+				</script>
+				
+		</div>
+	</body>
+</html>
