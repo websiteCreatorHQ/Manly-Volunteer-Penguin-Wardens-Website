@@ -56,7 +56,7 @@
 					-->
 					<a href='index.php?page=home.html'><div class='navButton'>Home</div></a>
 					
-					<div class='navButton' onclick='toggleDropdown($("#menuAbout"));'>
+					<div class='navButton' onmouseover='showDropdown($("#menuAbout"), true);' onmouseout='showDropdown($("#menuAbout"), false);'>
 						About
 						<div class='navDropdown' id='menuAbout'>
 							<a href='index.php?page=whatWeDo.html&sect=about'>
@@ -71,7 +71,7 @@
 						</div>
 					</div>
 					
-					<div class='navButton' onclick='toggleDropdown($("#menuPenguins"));'>
+					<div class='navButton' onmouseover='showDropdown($("#menuPenguins"), true);' onmouseout='showDropdown($("#menuPenguins"), false);'>
 						Little Penguins
 						<div class='navDropdown' id='menuPenguins'>
 							<a href='index.php?page=life.html&sect=littlePenguins'>
@@ -92,7 +92,7 @@
 						</div>
 					</div>
 					
-					<div class='navButton' onclick='toggleDropdown($("#menuInvolved"));'>
+					<div class='navButton' onmouseover='showDropdown($("#menuInvolved"), true);' onmouseout='showDropdown($("#menuInvolved"), false);'>
 						Get Involved
 						<div class='navDropdown' id='menuInvolved'>
 							<a href='index.php?page=volunteer.html&sect=getInvolved'>
@@ -128,7 +128,7 @@
 		<!--
 			Click anywhere else to disable dropdown menus
 		-->
-		<div onclick='toggleDropdown();'>
+		<div onclick='showDropdown($(".navDropdown"), false);'>
 			<!--
 				All other content will be displayed here,
 				so that all pages will contain common elements
@@ -167,7 +167,7 @@
 			
 		
 		<!--
-			
+			Our footer
 		-->
 		<footer>
 			<div class="footerContainer">

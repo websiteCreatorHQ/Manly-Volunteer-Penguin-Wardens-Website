@@ -1,6 +1,8 @@
-/**
- * Text formatting stuff
- */
+/** 
+ * /// <summary>
+ * /// 		Text formatting
+ * /// </summary>
+ **/
 h1{ font-size: 26px; }
 h2{ font-size: 24px; }
 h3{ font-size: 22px; }
@@ -8,6 +10,8 @@ h4{ font-size: 20px; margin-top: 0px; margin-bottom: 0px; }
 p, li { font-size: 16px; }
 a { color: #0505c1; }
 a:hover { color: #0093dd; }
+
+
 
 body
 {
@@ -17,6 +21,13 @@ body
 	
 	font-family: 'Itim', cursive;
 }
+
+
+/**
+ * labeledImage:
+ * - put an image in a div with this class
+ *   to enable an image with a label infront
+ */
 .labeledImage
 {
 	width: 250px;
@@ -33,6 +44,11 @@ body
 	top: 0;
 	left: 0;
 }
+/**
+ * accompanyingLabel:
+ * - put a div with this class after an image,
+ *   inside a labeled image div to label the image
+ */
 .accompanyingLabel
 {
 	width: 100%;
@@ -59,7 +75,10 @@ body
 	position: absolute;
 	padding: 10px;
 	bottom: 0;
-}	
+}
+
+
+	
 header
 {
 	width: 100%;
@@ -68,9 +87,9 @@ header
 	color: #000000;
 	background: #ffffff;
 }
-/**
- * NAV STUFF
- */
+
+
+
 nav
 {
 	width: 100%;
@@ -78,15 +97,6 @@ nav
 	color: #ffffff;
 	
 	font-size: 20px;
-}
-nav a
-{
-	color: #ffffff;
-	text-decoration: none;
-}
-nav a:visited
-{
-	color: #ffffff;
 }
 nav form
 {
@@ -101,8 +111,8 @@ nav input
 }
 /**
  * navContainer:
- * - encapsulate this around the nav content to center
- *   them to center of page
+ * - encapsulate this around the nav content
+ *   center them on page
  */
 .navContainer
 {
@@ -133,6 +143,11 @@ nav input
 	width: 100%;
 	display: block;
 }
+nav a
+{
+	color: #ffffff;
+	text-decoration: none;
+}
 .navButton:hover
 {
 	background: #020260;
@@ -143,15 +158,19 @@ nav input
 	background: #7b7bfc;
 }
 
-/**
- * Form styles
- */
+/** 
+ * /// <section>
+ * /// 		Form styles 
+ * /// </section>
+ **/
 input, textarea
 {
 	width: 100%;
 	font-family: 'Itim', cursive;
 	font-size: 16px;
 }
+
+
 
 footer
 {
@@ -195,7 +214,9 @@ footer
 
 
 /**
- * Search results stuff
+ * searchResult:
+ * - a search result in the search page
+ *   will be contained into this div
  */
  .searchResult
  {
@@ -205,6 +226,8 @@ footer
 	padding: 25px;	
 	overflow: hidden;
  }
+ 
+ 
 /**
  * imageGallery:
  * - putting this class on a div specifies the size of the
@@ -227,6 +250,14 @@ footer
 	bottom: -120px;
 	left: 800px;
 }
+/**
+ * imageGalleryArrows:
+ * - place these divs into the imageGallery div
+ *   after all the images to display arrows
+ * - the arrow icons will be a unicode inside the div
+ * - a further style attribute is required to align the divs
+ *   left or right
+ */
 .imageGalleryArrows
 {
 	position: absolute;
@@ -252,9 +283,15 @@ footer
 {
 	color: #000000;
 }
-/**
- * column styles
- */
+
+
+
+/** 
+ * /// <section>
+ * /// 		Various column styles that pages on
+ * /// 		this website will use 
+ * /// </section>
+ **/
 .column1
 {
 	width: 800px;
@@ -272,9 +309,13 @@ footer
 	
 	text-align: justify;
 }
-/**
- * For pages where columns are not exactly defined
- */
+
+
+/** 
+ * /// <section>
+ * /// 		For pages where columns are not necessary 
+ * /// </section>
+ **/
 .bulletinBoard
 {
 	width:800px;

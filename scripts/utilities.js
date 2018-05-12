@@ -1,28 +1,19 @@
 /**
- * toggleDropdown:
- * - When an element with this function attached as an action is clicked,
+ * showDropdown:
+ * - When an element with this function attached as an action is clicked/hovered,
  *   if it provides an element that represents the drop down menu as a parameter,
- *   this function will toggle its display
+ *   this function will show or hide the drop down menu based on the canShow boolean
  * - The parameter will be a jquery object
  */
-function toggleDropdown (dropdownElement)
+function showDropdown (dropdownElement, canShow)
 {
-	/* Take note of whether element is visible or not
-     */
-	if (dropdownElement)
-	{
-		var elementIsVisible = dropdownElement.is(':visible');	
-	}
-	
-	/* Hide all other dropdown menus that might be visible
-     */
-	$('.navDropdown').hide();
-	
-	/* Show the dropdown menu if it was hiding in the first place
-	 */
-	if (dropdownElement && !elementIsVisible)
+	if (canShow)
 	{
 		dropdownElement.show();
+	}
+	else
+	{
+		dropdownElement.hide();
 	}
 }
 
