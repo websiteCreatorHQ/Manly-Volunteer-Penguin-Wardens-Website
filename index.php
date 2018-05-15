@@ -177,9 +177,11 @@
 					
 					<!-- SAME AS CONTACT PAGE, NEED CONSIDERATION -->
 					<p>
-						<strong>Manly Council</strong> (02) 9976 1500 <br />
-						<strong>Manly Environment Centre office</strong> and <a href='mailto:mec@manly.nsw.gov.au '>mec@manly.nsw.gov.au</a> <br />
-						<strong>The National Parks and Wildlife Duty Officer</strong> (02) 9457 9577 to report any dogs, cats or foxes in critical habitat areas or anyone disturbing little penguins and their nests. <br />
+						<strong>Manly Council</strong>(02) 9976 1500 <br />
+						<br />
+						<strong>Manly Environment Centre office</strong><br />
+						41 Belgrave St, Manly NSW 2095<br />
+						<a href='mailto:mec@manly.nsw.gov.au'>mec@manly.nsw.gov.au</a>
 					</p>
 				</div>
 				

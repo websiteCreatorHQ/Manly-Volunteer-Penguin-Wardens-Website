@@ -42,7 +42,11 @@
 		 */
 		public function acquireFirstImage()
 		{
-			preg_match('/<img([^>]*)/', $this->textString, $match);
+			$imagePattern =
+<<<END_OF_TEXT
+			/<img[^>]*src=(?:"|')([^"']*)/
+END_OF_TEXT;
+			preg_match($imagePattern, $this->textString, $match);
 			if (count($match) > 1)
 			{
 				return $match[1];
@@ -197,7 +201,7 @@
 			'
 			<div style="padding:10px;float:left;overflow:hidden;width:200px;height:160px;">
 				<a href="'.$displayingPage->pageURL.'">
-					<img'.$pageImage.' style="height:100%;width:auto">
+					<img src="'.$pageImage.'" style="height:100%;width:auto">
 				</a>
 			</div>
 			';
@@ -220,20 +224,9 @@
 		
 		echo '<h2 style="text-align:center;">'.$displayingPage->acquireTitle().'</h2>';
 		
-		echo '<div style="height:240px;overflow:hidden;"><p>';
+		echo '<div style="height:150px;overflow:hidden;"><p>';
 		
 		$pageImage = $displayingPage->acquireFirstImage();
-		if ($pageImage != null)
-		{
-			echo 
-			'
-			<div style="overflow:hidden;width:200px;height:160px;">
-				<a href="'.$displayingPage->pageURL.'">
-					<img'.$pageImage.' style="height:100%;width:auto">
-				</a>
-			</div>
-			';
-		}
 		$displayingContent = $displayingPage->acquireDescription();
 		if (strlen($displayingContent) >= $stringLength)
 			$displayingContent = substr($displayingContent, 0, $stringLength)." ... ";

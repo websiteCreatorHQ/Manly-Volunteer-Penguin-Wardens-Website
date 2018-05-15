@@ -40,11 +40,9 @@
 				The image gallery
 			-->
 			<div class="imageGallery">
-				<img src='https://upload.wikimedia.org/wikipedia/commons/8/81/Eudyptula_minor_family_exiting_burrow.jpg' alt='SAMPLE IMAGE'/>
-				<img src='https://upload.wikimedia.org/wikipedia/commons/8/81/Eudyptula_minor_family_exiting_burrow.jpg' alt='SAMPLE IMAGE'/>
-				<img src='https://upload.wikimedia.org/wikipedia/commons/8/81/Eudyptula_minor_family_exiting_burrow.jpg' alt='SAMPLE IMAGE'/>
-				<img src='https://upload.wikimedia.org/wikipedia/commons/8/81/Eudyptula_minor_family_exiting_burrow.jpg' alt='SAMPLE IMAGE'/>
-				<img src='https://upload.wikimedia.org/wikipedia/commons/8/81/Eudyptula_minor_family_exiting_burrow.jpg' alt='SAMPLE IMAGE'/>
+				<a href='index.php?page=life.html&sect=littlePenguins'><img src='images/home-slides-1-Take a Peek Into Our Lives.jpg' width="800" height="240" alt='Link to Life as a Little Penguin'></a>
+				<a href='index.php?page=donate.html&sect=getInvolved'><img src='images/home-slides-2-Call For Help.jpg' width="800" height="240" alt='Link to Habitat'/></a>
+				<a href='index.php?page=habitat.html&sect=littlePenguins'><img src='images/home-slides-3-Get to Know Our Home.jpg' width="800" height="240" alt='Link to Donate'/></a>
 				
 				<div class='imageGalleryArrows' style='left:0;' onclick='runImageGallery($(".imageGallery"),-1);startGallery();'>
 					&#9668;
@@ -58,9 +56,9 @@
 			<?php
 				include_once('./php/pagesGatherer.php');
 				
-				displayPageColumn3(acquirePage('./pages/getInvolved/donate.html', 'donate.html', 'getInvolved'), 350);
-				displayPageColumn3(acquirePage('./pages/getInvolved/learn.html', 'learn.html', 'getInvolved'), 350);
-				displayPageColumn3(acquirePage('./pages/getInvolved/volunteer.html', 'volunteer.html', 'getInvolved'), 350);
+				displayPageColumn3(acquirePage('./pages/getInvolved/donate.html', 'donate.html', 'getInvolved'), 200);
+				displayPageColumn3(acquirePage('./pages/getInvolved/learn.html', 'learn.html', 'getInvolved'), 200);
+				displayPageColumn3(acquirePage('./pages/getInvolved/volunteer.html', 'volunteer.html', 'getInvolved'), 200);
 				
 			?>
 			
