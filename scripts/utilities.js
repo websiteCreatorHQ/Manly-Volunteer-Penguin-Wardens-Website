@@ -38,13 +38,13 @@ function runImageGallery(galleryElement, direction)
 		(
 			$(allImages[i]).css("left") == '0px' && 
 			(
-				$(allImages[mod((i+(1*direction)),allImages.length)]).css("left") == '800px' ||
-				$(allImages[mod((i+(1*direction)),allImages.length)]).css("left") == '-800px'
+				$(allImages[mod((i+(1*direction)),allImages.length)]).css("left") == '975px' ||
+				$(allImages[mod((i+(1*direction)),allImages.length)]).css("left") == '-975px'
 			)
 		)
 		{
-			$(allImages[i]).animate({left : (-800*(1*direction)) }, 1000);
-			$(allImages[mod((i+(1*direction)),allImages.length)]).css({'left' : (800*(1*direction)) }).animate({left : '0px'}, 1000);
+			$(allImages[i]).animate({left : (-975*(1*direction)) }, 1000);
+			$(allImages[mod((i+(1*direction)),allImages.length)]).css({'left' : (975*(1*direction)) }).animate({left : '0px'}, 1000);
 			
 			toggledImages = true;
 		}

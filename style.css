@@ -30,7 +30,7 @@ body
  */
 .labeledImage
 {
-	width: 250px;
+	width: 310px;
 	height: 180px;
 	margin: 0;
 	position: relative;
@@ -220,7 +220,7 @@ footer
  */
  .searchResult
  {
-	width: 800px;
+	width: 975px;
 	max-height: 240px;
 	margin: 0 auto;
 	padding: 25px;	
@@ -235,8 +235,8 @@ footer
  */
 .imageGallery
 {
-	width: 800px;
-	height: 240px;
+	width: 975px;
+	height: 292.5px;
 	margin: 0 auto;
 	overflow: hidden;
 	position: relative;
@@ -248,7 +248,7 @@ footer
 	display: block;
 	position: absolute;
 	bottom: 0px;
-	left: 800px;
+	left: 975px;
 }
 /**
  * imageGalleryArrows:
@@ -263,15 +263,15 @@ footer
 	position: absolute;
 	/* Center vertically
 	 */
-	height: 240px;
-	line-height: 240px;
+	height: 292.5px;
+	line-height: 292.5px;
 	
 	padding-left: 25px;
 	padding-right: 25px;
 	
 	color: #ffffff;
-	text-shadow: 2px 2px #000000;
-	font-size: 30px;
+	text-shadow: 3px 3px #000000;
+	font-size: 50px;
 	
 	z-index: 1;
 }
@@ -294,7 +294,7 @@ footer
  **/
 .column1
 {
-	width: 800px;
+	width: 975px;
 	padding: 10px;
 	display: inline-block;
 	
@@ -302,7 +302,7 @@ footer
 }
 .column3
 {
-	width: 250px;
+	width: 310px;
 	padding: 10px;
 	display: inline-block;
 	vertical-align: top;
@@ -318,21 +318,21 @@ footer
  **/
 .bulletinBoard
 {
-	width:800px;
+	width:975px;
 	padding:10px;
 	margin:0 auto;
 	overflow:auto;
 }
 .bulletinPosterLeft
 {
-	width:400px;
+	width:500px;
 	padding:10px;
 	float:left;
 	text-align:justify;
 }
 .bulletinPosterRight
 {
-	width:300px;
+	width:420px;
 	padding:10px;
 	float:right;
 }
