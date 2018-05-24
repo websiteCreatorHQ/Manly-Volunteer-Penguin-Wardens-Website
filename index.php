@@ -17,6 +17,9 @@
 		<meta name="keywords"    content="Little Penguins,Manly Penguins,Little Penguins Habitat,Penguin Warden,Volunteer Penguin Warden" />
 		<meta name="author"      content="Kevin S. Tran" />
 		
+		<!-- This line for responsive design -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
 		<!--
 			How this website will look will be determined below
 		-->
@@ -30,6 +33,8 @@
 		<!--script src="jquery.ui.map.full.min.js"></script-->
 		<script src="scripts/utilities.js"></script>
 	</head>
+	
+	<div style='overflow-x:hidden'>
 	
 	<body>
 		
@@ -47,7 +52,20 @@
 				<!--
 					All other stuff on the right
 			    -->
-				<div style='display:inline-block;text-align:right;vertical-align:top;'>
+				<div 
+					style='width:35px;position:absolute;' 
+					onclick=
+					'
+						var isVisible = $("#navMenu").is(":visible");
+						showDropdown($("#navMenu"), !isVisible);
+					'
+				>
+					<!-- Hamburger menu-->
+					<div class='navBurgerPiece'></div>
+					<div class='navBurgerPiece'></div>
+					<div class='navBurgerPiece'></div>
+				</div>
+				<div id='navMenu'>
 				
 					<!--
 						The buttons on the navigation bar, 
@@ -271,4 +289,6 @@
 		</footer>
 	
 	</body>
+	
+	</div>
 </html>

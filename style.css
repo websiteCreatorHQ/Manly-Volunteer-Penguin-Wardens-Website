@@ -7,19 +7,48 @@ h1{ font-size: 26px; }
 h2{ font-size: 24px; }
 h3{ font-size: 22px; }
 h4{ font-size: 20px; margin-top: 0px; margin-bottom: 0px; }
-p, li { font-size: 16px; }
 a { color: #0505c1; }
 a:hover { color: #0093dd; }
 
-
-
 body
 {
+	font-size: 16px;
 	margin: 0;
 	height: 100%;
-	overflow-x: hidden;
 	
 	font-family: 'Itim', cursive;
+}
+@media screen and (min-width: 479px)
+{
+	h1{ font-size: 26px; }
+	h2{ font-size: 24px; }
+	h3{ font-size: 22px; }
+	h4{ font-size: 20px; margin-top: 0px; margin-bottom: 0px; }
+}
+@media screen and (min-width: 767px)
+{
+	h1{ font-size: 26px; }
+	h2{ font-size: 24px; }
+	h3{ font-size: 22px; }
+	h4{ font-size: 20px; margin-top: 0px; margin-bottom: 0px; }
+}
+/** 
+ * /// <summary>
+ * /// 		Embedded YouTube
+ * /// </summary>
+ **/
+iframe
+{
+	width: 240px;
+	height: 134px;
+}
+@media screen and (min-width: 479px)
+{
+	iframe
+	{
+		width: 854px;
+		height: 480px;
+	}
 }
 
 
@@ -30,11 +59,22 @@ body
  */
 .labeledImage
 {
-	width: 310px;
+	width: 180px;
 	height: 180px;
 	margin: 0;
 	position: relative;
 	overflow: hidden;
+}
+@media screen and (min-width: 479px)
+{
+	.labeledImage
+	{
+		width: 310px;
+		height: 180px;
+		margin: 0;
+		position: relative;
+		overflow: hidden;
+	}
 }
 .labeledImage img
 {
@@ -105,9 +145,23 @@ nav form
 }
 nav input
 {
-	width: 20%;
+	width: 80%;
 	font-family: 'Itim', cursive;
 	font-size: 20px;
+}
+@media screen and (min-width: 479px)
+{
+	nav form
+	{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	nav input
+	{
+		width: 20%;
+		font-family: 'Itim', cursive;
+		font-size: 20px;
+	}
 }
 /**
  * navContainer:
@@ -118,6 +172,41 @@ nav input
 {
 	text-align: center;
 	padding: 10px;
+}
+.navBurgerPiece
+{
+	width: 35px;
+	height: 5px;
+	background-color: #0093dd;
+	margin: 6px 0;
+	
+	display:block;
+}
+.navBurgerPiece:active
+{
+	background: #7b7bfc;
+}
+@media screen and (min-width: 479px)
+{
+	.navBurgerPiece
+	{
+		display:none;
+	}
+}
+#navMenu
+{
+	display:none;
+	text-align:center;
+	vertical-align:top;
+}
+@media screen and (min-width: 479px)
+{
+	#navMenu
+	{
+		display:inline-block;
+		text-align:right;
+		vertical-align:top;
+	}
 }
 .navButton
 {
@@ -220,12 +309,23 @@ footer
  */
  .searchResult
  {
-	width: 975px;
+	width: 240px;
 	max-height: 240px;
 	margin: 0 auto;
 	padding: 25px;	
 	overflow: hidden;
  }
+@media screen and (min-width: 479px)
+{
+	.searchResult
+	{
+		width: 975px;
+		max-height: 240px;
+		margin: 0 auto;
+		padding: 25px;	
+		overflow: hidden;
+	}
+}
  
  
 /**
@@ -235,8 +335,8 @@ footer
  */
 .imageGallery
 {
-	width: 975px;
-	height: 292.5px;
+	width: 300px;
+	height: 90px;
 	margin: 0 auto;
 	overflow: hidden;
 	position: relative;
@@ -248,7 +348,47 @@ footer
 	display: block;
 	position: absolute;
 	bottom: 0px;
-	left: 975px;
+	left: 300px;
+}
+@media screen and (min-width: 479px)
+{
+	.imageGallery
+	{
+		width: 480px;
+		height: 144px;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+	}
+	.imageGallery img
+	{
+		width: 100%;
+		height: auto;
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		left: 480px;
+	}
+}
+@media screen and (min-width: 767px)
+{
+	.imageGallery
+	{
+		width: 975px;
+		height: 292.5px;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+	}
+	.imageGallery img
+	{
+		width: 100%;
+		height: auto;
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		left: 975px;
+	}
 }
 /**
  * imageGalleryArrows:
@@ -294,20 +434,54 @@ footer
  **/
 .column1
 {
-	width: 975px;
+	width: 240px;
 	padding: 10px;
 	display: inline-block;
 	
-	text-align: justify;
+	text-align: left;
+}
+@media screen and (min-width: 479px)
+{
+	.column1
+	{
+		width: 480px;
+		padding: 10px;
+		display: inline-block;
+		
+		text-align: justify;
+	}
+}
+@media screen and (min-width: 767px)
+{
+	.column1
+	{
+		width: 975px;
+		padding: 10px;
+		display: inline-block;
+		
+		text-align: justify;
+	}
 }
 .column3
 {
-	width: 310px;
+	width: 240px;
 	padding: 10px;
 	display: inline-block;
 	vertical-align: top;
 	
-	text-align: justify;
+	text-align: left;
+}
+@media screen and (min-width: 479px)
+{
+	.column3
+	{
+		width: 310px;
+		padding: 10px;
+		display: inline-block;
+		vertical-align: top;
+		
+		text-align: justify;
+	}
 }
 
 
@@ -318,21 +492,44 @@ footer
  **/
 .bulletinBoard
 {
-	width:975px;
+	width:240px;
 	padding:10px;
 	margin:0 auto;
 	overflow:auto;
 }
 .bulletinPosterLeft
 {
-	width:500px;
+	width:200px;
 	padding:10px;
 	float:left;
-	text-align:justify;
+	text-align:left;
 }
 .bulletinPosterRight
 {
-	width:420px;
+	width:200px;
 	padding:10px;
-	float:right;
+	float:left;
+}
+@media screen and (min-width: 479px)
+{
+	.bulletinBoard
+	{
+		width:975px;
+		padding:10px;
+		margin:0 auto;
+		overflow:auto;
+	}
+	.bulletinPosterLeft
+	{
+		width:400px;
+		padding:10px;
+		float:left;
+		text-align:justify;
+	}
+	.bulletinPosterRight
+	{
+		width:420px;
+		padding:10px;
+		float:right;
+	}
 }
